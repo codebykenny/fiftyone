@@ -1,0 +1,179 @@
+@blue: #54C0CD;
+@pink: #DD4977;
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
+@import url(http://meyerweb.com/eric/tools/css/reset/reset.css);
+@import "spacing.less";
+
+a {
+	color: inherit !important;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+body {
+	font-family: 'Whitney SSm 7r', 'Whitney SSm A','Whitney SSm B',Georgia, Verdana,"Lucida Grande", "Lucida Sans",serif;
+}
+
+nav {
+	background-color: black;
+	height: 105px;
+	text-align: center;
+	width: 100%;
+
+	.brand {
+		display: inline-block;
+		font-size: 20px;
+		line-height: 70px;
+		margin: 0 auto;
+
+		.left {
+			color: darkgrey;
+			font-weight: 300;
+		}
+
+		.right {
+			color: white;
+			font-weight: 700;
+		}
+	}
+
+	.navigation {
+		background-color: #161618;
+		color: white;
+		font-size: 12px;
+		height: 35px;
+
+		ul {
+			line-height: 35px;
+			li {
+				display: inline-block;
+				padding: 0px 10px;
+			}
+		}
+	}
+}
+
+/*----------*/
+.carousel {
+	background:
+	linear-gradient(
+		rgba(77, 77, 77, 0.45),
+		rgba(20, 1, 1, 0.45)),
+	url('https://fanart.tv/api/download.php?type=download&image=51946&section=2');
+
+	background-position: 50% 50%;
+	background-size: cover;
+	height: 450px;
+	text-align: center;
+	width: 100%;
+
+	.text {
+		padding: 9%;
+	}
+
+	.title {
+		color: white;
+		display: block;
+		font-size: 50px;
+		line-height: 70px;
+		margin: 0 auto;
+	}
+
+	.subscript {
+		color: darkgrey;
+		display: block;
+		font-size: 20px;
+		line-height: 70px;
+		margin: 0 auto;
+	}
+}
+
+.divider {
+	background-color: lightgray;
+	height: 1px;
+	margin: 29px 0px 10px 0px;
+	text-align: center;
+
+	h5 {
+		background-color: white !important;
+		color: black;
+		padding: 0px 22px;
+		position: relative;
+		top: -0.5em;
+		width: 154px;
+		margin: 0 auto;
+	}
+}
+
+/*-------- HOME --------*/
+
+.post-home {
+	height: 400px;
+	padding: 30px;
+
+	.content {
+		background-position: center center;
+		background-size: cover !important;
+		border-radius: 3px;
+		color: white;
+		height: 100%;
+		padding: 180px 5% 0% 5%;
+		position: relative;
+		text-align: left;
+		width: 100%;
+
+		.title {
+			font-size: 16px;
+			text-decoration: underline;
+		}
+
+		.blurb {
+			height: 80px;
+			margin-top: 10px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+
+			background: -webkit-linear-gradient(#ffffff, rgba(0, 0, 0, 0));
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+
+		a {
+			border-radius: 3px;
+			border: none;
+			color: white !important;
+			display: block;
+			font-size: 11px;
+			font-weight: bold;
+			margin-top: 10px;
+			padding: 10px;
+			text-align: center;
+			text-shadow: 0px 2px black;
+			width: 100%;
+
+			&.color0 {
+				background-color: #9A3535;
+			}
+
+			&.color1 {
+				background-color: #359A73;
+			}
+
+			&.color2 {
+				background-color: #35929A;
+			}
+
+			&.color3 {
+				background-color: #A48531;
+			}
+
+			&.color4 {
+				background-color: #A2336F;
+			}
+		}
+	}
+}

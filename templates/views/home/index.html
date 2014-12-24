@@ -1,0 +1,28 @@
+{% verbatim %}
+<div class="carousel">
+	<div class="text">
+		<span class="title"><a href="#">Kendrick Lamar</a></span>
+		<span class="subscript">COMES TO MIAMI</span>
+	</div>
+</div>
+
+<div class="latest ptl">
+	<div class="divider">
+		<h5>LATEST NEWS</h5>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 post-home" ng-repeat="post in posts">
+					<div class="content" set-blog-background data-image="{{post.image}}">
+						<span class="title">
+							{{post.title}}
+						</span>
+						<div class="span blurb">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet beatae, tempore officiis neque obcaecati sed magni soluta cupiditate, quas id nemo. Minima voluptate maxime nulla, cumque sint eligendi et magnam.
+						</div>
+						<a ng-class="'color' + ($index % 5)" href="/blog/post/{{post.id}}">Continue Reading -></a>
+					</div>
+				</div>
+		</div>
+	</div>
+</div>
+{% endverbatim %}
