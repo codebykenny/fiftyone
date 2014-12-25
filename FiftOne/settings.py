@@ -33,12 +33,23 @@ ALLOWED_HOSTS = []
 TEMPLATE_DIRS = (
     join(BASE_DIR,  'templates'),
 )
+TEMPLATE_CONTEXT_PROCESSORS = (
+    "django.contrib.auth.context_processors.auth",
+    "django.core.context_processors.debug",
+    "django.core.context_processors.i18n",
+    "django.core.context_processors.media",
+    "django.core.context_processors.static",
+    "django.core.context_processors.tz",
+    "django.contrib.messages.context_processors.messages",
+    "django.core.context_processors.request"
+)
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
 INSTALLED_APPS = (
+    'wpadmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -107,3 +118,17 @@ STATIC_ROOT = '/static/'
 COMPRESS_ROOT = '/static/compressed/'
 
 COMPRESS_ENABLED=True
+
+WPADMIN = {
+    'admin': {
+        'title': 'Django admin panel',
+        'menu': {
+            'top': 'wpadmin.menu.menus.BasicTopMenu',
+            'left': 'wpadmin.menu.menus.BasicLeftMenu',
+        },
+        'dashboard': {
+            'breadcrumbs': True,
+        },
+        'custom_style': STATIC_URL + 'wpadmin/css/themes/sunrise.css',
+    }
+}

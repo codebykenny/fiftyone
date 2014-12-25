@@ -10,6 +10,7 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'', include('Home.urls')),
+    url(r'api/', include('api.urls')),
     url(r'^views/(?P<controller>[-_\w]+/$)', views.index, name='index' ),
     url(r'^views/(?P<controller>\w+)/(?P<action>\w+)/$', views.index),
     url(r'^blog/', views.index),
