@@ -35,10 +35,11 @@ class Blog(models.Model):
 class BlogPost(models.Model):
 	blog		= models.ForeignKey(Blog)
 	author		= models.ForeignKey(Author, null=True, blank=True)
-	title		= models.CharField(max_length=50)
-	blurb		= models.CharField(max_length=100)
-	image_url	= models.CharField(max_length=200)
-	body		= models.CharField(max_length=5000)
+	title		= models.CharField(max_length=50, null=True, blank=True)
+	blurb		= models.CharField(max_length=100, null=True, blank=True)
+	image_url	= models.CharField(max_length=200, null=True, blank=True)
+	body		= models.CharField(max_length=5000, null=True, blank=True)
+	active		= models.BooleanField()
 	created		= models.DateField(default=timezone.now)
 	modified	= models.DateField(default=timezone.now)
 

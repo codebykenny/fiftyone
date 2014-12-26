@@ -9,7 +9,7 @@ from api.models import Blog, BlogPost, Author
 # Create your views here.
 
 def latest(request):
-	post = BlogPost.objects.all().order_by('created').select_related() [:6]
+	post = BlogPost.objects.filter(active=True).order_by('created').select_related() [:6]
 
 	post_json = serializers.serialize('json', post)
 
