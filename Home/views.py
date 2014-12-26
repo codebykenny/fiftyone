@@ -13,6 +13,4 @@ def index(request, controller = None, action = None):
 		context		= RequestContext(request, {})
 
 
-	print(controller)
-
 	return HttpResponse(template.render(context))

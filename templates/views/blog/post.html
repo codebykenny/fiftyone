@@ -1,3 +1,33 @@
 {% verbatim %}
-	<h1>This BlogPost Id is {{id}}</h1>
+<div ng-if="post" class="post-image text-center" set-blog-background data-image="{{post.image_url}}">
+</div>
+<div class="container mtl ptl">
+	<div class="row">
+		<div class="col-md-12">
+			<div ng-if="author" class="post-author">
+				<img src="{{author.image_url}}" alt="">
+				<span class="name">{{author.name}}</span>
+			</div>
+			<div class="text-center center maxw-450">
+			</div>
+			<div class="text-left center maxw-750">
+				<h1 class="post-title">
+					{{post.title}}
+				</h1>
+
+				<div class="text-center">
+					<span class="post-date">{{post.created | date:'MMMM dd, yyyy'}} </span>
+				</div>
+
+				<div class="post-body">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi perspiciatis enim asperiores, sed praesentium ex ducimus ad, unde dignissimos quod ipsa ab, animi tempora cumque magni autem similique fugit nesciunt!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi perspiciatis enim asperiores, sed praesentium ex ducimus ad, unde dignissimos quod ipsa ab, animi tempora cumque magni autem similique fugit nesciunt!</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi perspiciatis enim asperiores, sed praesentium ex ducimus ad, unde dignissimos quod ipsa ab, animi tempora cumque magni autem similique fugit nesciunt!</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi perspiciatis enim asperiores, sed praesentium ex ducimus ad, unde dignissimos quod ipsa ab, animi tempora cumque magni autem similique fugit nesciunt!</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi perspiciatis enim asperiores, sed praesentium ex ducimus ad, unde dignissimos quod ipsa ab, animi tempora cumque magni autem similique fugit nesciunt!</p>
+					<p></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 {% endverbatim %}

@@ -4,6 +4,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
 @import url(http://meyerweb.com/eric/tools/css/reset/reset.css);
 @import "spacing.less";
+@import "utilities.less";
 
 a {
 	color: inherit !important;
@@ -182,4 +183,82 @@ nav {
 			}
 		}
 	}
+}
+
+.light-btn {
+	background-color: rgb(241, 241, 241);
+	border: 1px solid lightgray;
+	border-radius: 4px;
+	padding: 10px;
+
+	&:hover {
+		border: 1px solid darkgray;
+	}
+}
+
+/*-------- Blog Post --------*/
+/*
+.post-title	{
+	bottom: 50%;
+	color: white;
+	font-family: 'Gotham A', 'Gotham B', sans-serif;
+	font-size: 50px;
+	font-weight: 300;
+	left: 50%;
+	margin-left: -20%;
+	padding: 10px;
+	position: absolute;
+	text-shadow: 1px 1px black;
+
+}
+*/
+
+
+.post-title	{
+	font-family: 'Gotham A', 'Gotham B', sans-serif;
+	font-size: 50px;
+	font-weight: 300;
+	margin: 10px 0px 100px 0px;
+	padding: 10px;
+	text-align: center;
+}
+
+
+.post-body {
+	font-size: 19px;
+
+	p {
+		margin: 20px 0px;
+	}
+}
+
+.post-image {
+	background-size: cover !important;
+	background-position: 50% 50%;
+	height: 400px;
+	position: relative;
+}
+
+.post-author {
+	position: absolute;
+	span {
+		font-weight: bold;
+		position: relative;
+		text-transform: uppercase;
+		top: -73px;
+	}
+
+	img {
+		width: 100px;
+		border-radius: 100%;
+	}
+}
+
+.post-date {
+	text-transform: uppercase;
+	font-size: 22px;
+	font-weight: 100;
+	color: rgba(104, 104, 104, 0.41);
+	top: -90px;
+	position: relative;
 }

@@ -73,13 +73,15 @@ var fifty = angular.module('fifty', [
 			$locationProvider.html5Mode(true);
 	}])
 
-	.directive('setBlogBackground', ['$http', function ($http) {
+	.directive('setBlogBackground', ['$http',  '$timeout', function ($http, $timeout) {
 		return {
 			restrict: 'A',
 			link: function (scope, element, attrs) {
-
-				element.css('background', 'linear-gradient(rgba(198, 198, 198, 0.45), rgba(17, 17, 17, 0.75)), url(' + attrs.image + ')')
-				element.css('background-position', 'center center')
+				$timeout(function() {
+					console.log(attrs.image)
+					element.css('background', 'linear-gradient(rgba(198, 198, 198, 0.45), rgba(17, 17, 17, 0.75)), url(' + attrs.image + ')');
+					element.css('background-position', 'center center');
+				}, 0);
 			}
 		};
 	}]);

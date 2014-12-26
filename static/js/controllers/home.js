@@ -1,6 +1,8 @@
 fifty.controller('Home', ['$scope', '$http', '$location',
 	function ($scope, $http, $location) {
 
+		$scope.latest = [];
+
 		$scope.categories = [{
 			name: 'All'
 		}, {
@@ -32,5 +34,12 @@ fifty.controller('Home', ['$scope', '$http', '$location',
 			image: 'http://urbantastebuds.com/wp-content/uploads/2014/02/credit-cards-ftr.jpg',
 			title: 'Shop Til\' You Drop Mayhem'
 		}];
+
+		$http.get('/api/latest/').success(function(data) {
+			for (var i in data) {
+				data[i].fields.id = data[i].pk
+				$scope.latest.push(data[i].fields);
+			}
+		});
 
 	}]);
