@@ -1,5 +1,5 @@
 """
-Django settings for FiftOne project.
+Django settings for FiftyOne project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.7/topics/settings/
@@ -81,9 +81,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'FiftOne.urls'
+ROOT_URLCONF = 'FiftyOne.urls'
 
-WSGI_APPLICATION = 'FiftOne.wsgi.application'
+WSGI_APPLICATION = 'FiftyOne.wsgi.application'
 
 
 # Database
@@ -132,3 +132,23 @@ WPADMIN = {
         'custom_style': STATIC_URL + 'wpadmin/css/themes/sunrise.css',
     }
 }
+
+# Parse database configuration from $DATABASE_URL
+import dj_database_url
+DATABASES['default'] =  dj_database_url.config()
+
+# Honor the 'X-Forwarded-Proto' header for request.is_secure()
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+# Allow all host headers
+ALLOWED_HOSTS = ['*']
+
+# Static asset configuration
+import os
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = 'staticfiles'
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
