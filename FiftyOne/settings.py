@@ -153,4 +153,22 @@ STATICFILES_DIRS = (
     os.path.join('static'),
 )
 
+import herokuify
+
+from herokuify.common import *          # Common settings, SSL proxy header
+from herokuify.aws import *             # AWS access keys
+from herokuify.mail.mailgun import *    # Mailgun email add-on settings
+from herokuify.mail.sendgrid import *   # ... or Sendgrid
+from herokuify.aws import AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_STORAGE_BUCKET_NAME
+
+DATABASES = herokuify.get_db_config()   # Database config
+CACHES = herokuify.get_cache_config()   # Memcache config for Memcache/MemCachier
+
+DEFAULT_FILE_STORAGE = "FiftyOne.storage.S3MediaStorage"
+MEDIA_URL = "https://{0}.s3.amazonaws.com/media/".format(AWS_STORAGE_BUCKET_NAME)
+
+STATICFILES_STORAGE = "FiftyOne.storage.CachedS3StaticStorage"
+STATIC_URL = "https://{0}.s3.amazonaws.com/static/".format(AWS_STORAGE_BUCKET_NAME)
+
+COMPRESS_STORAGE = "FiftyOne.storage.CachedS3StaticStorage"
 COMPRESS_OFFLINE = True
