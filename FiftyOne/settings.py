@@ -118,7 +118,7 @@ STATIC_URL = '/static/'
 COMPRESS_ROOT = '/static/compressed/'
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, '../static'),
 )
 
 COMPRESS_ENABLED=True
