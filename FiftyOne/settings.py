@@ -171,4 +171,4 @@ STATICFILES_DIRS = (
 # STATIC_URL = "https://{0}.s3.amazonaws.com/static/".format(AWS_STORAGE_BUCKET_NAME)
 
 # COMPRESS_STORAGE = "FiftyOne.storage.CachedS3StaticStorage"
-# COMPRESS_OFFLINE = True
+COMPRESS_OFFLINE = True
