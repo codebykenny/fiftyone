@@ -44,10 +44,6 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.request"
 )
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
-
 INSTALLED_APPS = (
     'wpadmin',
     'django.contrib.admin',
@@ -113,9 +109,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
-STATIC_ROOT = '/static/'
 COMPRESS_ROOT = '/static/compressed/'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
 
 COMPRESS_ENABLED=True
 
@@ -143,32 +145,4 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 # Allow all host headers
 ALLOWED_HOSTS = ['*']
 
-# Static asset configuration
-import os
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = 'staticfiles'
-STATIC_URL = '/static/'
-
-STATICFILES_DIRS = (
-    os.path.join('static'),
-)
-
-# import herokuify
-
-# from herokuify.common import *          # Common settings, SSL proxy header
-# from herokuify.aws import *             # AWS access keys
-# from herokuify.mail.mailgun import *    # Mailgun email add-on settings
-# from herokuify.mail.sendgrid import *   # ... or Sendgrid
-# from herokuify.aws import AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_STORAGE_BUCKET_NAME
-
-# DATABASES = herokuify.get_db_config()   # Database config
-# CACHES = herokuify.get_cache_config()   # Memcache config for Memcache/MemCachier
-
-# DEFAULT_FILE_STORAGE = "FiftyOne.storage.S3MediaStorage"
-# MEDIA_URL = "https://{0}.s3.amazonaws.com/media/".format(AWS_STORAGE_BUCKET_NAME)
-
-# STATICFILES_STORAGE = "FiftyOne.storage.CachedS3StaticStorage"
-# STATIC_URL = "https://{0}.s3.amazonaws.com/static/".format(AWS_STORAGE_BUCKET_NAME)
-
-# COMPRESS_STORAGE = "FiftyOne.storage.CachedS3StaticStorage"
 COMPRESS_OFFLINE = True
