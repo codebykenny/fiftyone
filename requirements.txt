@@ -1,5 +1,4 @@
 Django==1.7.1
-GroupMeCli==0.1a
 Twisted==13.2.0
 altgraph==0.10.2
 bdist-mpkg==0.5.0
