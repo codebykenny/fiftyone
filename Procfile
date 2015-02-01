@@ -1,1 +1,1 @@
-web: gunicorn FiftyOne.wsgi --log-file -
+web: gunicorn FiftyOne.wsgi
