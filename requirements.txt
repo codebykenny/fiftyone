@@ -58,7 +58,7 @@ pyparsing==2.0.1
 python-dateutil==1.5
 pytz==2013.7
 requests==2.4.1
-scipy==0.13.0b1
+#scipy==0.13.0b1
 six==1.4.1
 static3==0.5.1
 termcolor==1.1.0
