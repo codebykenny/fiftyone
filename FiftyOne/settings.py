@@ -111,7 +111,7 @@ USE_TZ = True
 
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-COMPRESS_STORAGE = 'FiftyOne.app.CachedS3BotoStorage.CachedS3BotoStorage'
+COMPRESS_STORAGE = 'FiftyOne.CachedS3BotoStorage.CachedS3BotoStorage'
 
 AWS_ACCESS_KEY_ID = 'AKIAIZP2ZD4ZHQ7Y5PYA'
 AWS_SECRET_ACCESS_KEY = '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'
