@@ -19,7 +19,7 @@ prettytable==0.7.2
 psycopg2==2.5.4
 py2app==0.7.3
 pyOpenSSL==0.13.1
-pyobjc-core==2.5.1
+#pyobjc-core==2.5.1
 pyobjc-framework-Accounts==2.5.1
 pyobjc-framework-AddressBook==2.5.1
 pyobjc-framework-AppleScriptKit==2.5.1
