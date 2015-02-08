@@ -9,14 +9,9 @@
         {% load staticfiles %}
         {% load compress %}
 
-        <link rel="stylesheet" type="text/less" href="{{ STATIC_URL }}less/application.less" />
-             <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}less/whitney.css" />
-             <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}less/gotham.css" />
-        {% compress css %}
-             <link rel="stylesheet" type="text/less" href="{{ STATIC_URL }}less/application.less" />
-             <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}less/whitney.css" />
-             <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}less/gotham.css" />
-        {% endcompress %}
+        <link rel="stylesheet" href="{{ STATIC_URL }}less/application.css" />
+             <link rel="stylesheet" href="{{ STATIC_URL }}less/whitney.css" />
+             <link rel="stylesheet" href="{{ STATIC_URL }}less/gotham.css" />
     </head>
 
     <body>
