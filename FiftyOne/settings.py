@@ -143,7 +143,7 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-COMPRESS_ENABLED=True
+COMPRESS_ENABLED=False
 
 WPADMIN = {
     'admin': {
