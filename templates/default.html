@@ -10,9 +10,9 @@
         {% load compress %}
 
         {% compress css %}
-             <link rel="stylesheet" type="text/less" href="/less/application.less" />
-             <link rel="stylesheet" type="text/css" href="/less/whitney.css" />
-             <link rel="stylesheet" type="text/css" href="/less/gotham.css" />
+             <link rel="stylesheet" type="text/less" href="{{ STATIC_URL }}less/application.less" />
+             <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}less/whitney.css" />
+             <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}less/gotham.css" />
         {% endcompress %}
     </head>
 
