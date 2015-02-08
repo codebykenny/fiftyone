@@ -105,34 +105,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.7/howto/static-files/
-
-
-# BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-# COMPRESS_STORAGE = 'FiftyOne.CachedS3BotoStorage.CachedS3BotoStorage'
-
-# AWS_ACCESS_KEY_ID = 'AKIAI6KGVLEEOVTOWODA'
-# AWS_SECRET_ACCESS_KEY = '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'
-# AWS_STORAGE_BUCKET_NAME = 'fiftyone2'
-# AWS_S3_SECURE_URLS = False
-# AWS_QUERYSTRING_AUTH = False
-
-# # STATIC_ROOT = 'staticfiles'
-# COMPRESS_OUTPUT_DIR = 'compressed'
-# COMPRESS_ROOT = 'static/compressed/'
-# STATICFILES_STORAGE = COMPRESS_STORAGE
-
-# STATIC_URL = "http://fiftyone2.s3-us-west-2.amazonaws.com/"
-# COMPRESS_URL = STATIC_URL
-# COMPRESS_ENABLED = True
-
-
-# STATICFILES_DIRS = (
-#     os.path.join(BASE_DIR, '../static'),
-# )
-
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
