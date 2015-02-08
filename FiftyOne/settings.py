@@ -136,8 +136,9 @@ USE_TZ = True
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = 'staticfiles'
+STATIC_ROOT = 'static/'
 STATIC_URL = '/static/'
+COMPRESS_URL = STATIC_URL
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
@@ -169,4 +170,4 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 # Allow all host headers
 ALLOWED_HOSTS = ['*']
 
-COMPRESS_OFFLINE = False
+COMPRESS_OFFLINE = True
