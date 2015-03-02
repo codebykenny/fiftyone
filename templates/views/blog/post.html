@@ -19,8 +19,7 @@
 					<span class="post-date">{{post.created | date:'MMMM dd, yyyy'}} </span>
 				</div>
 
-				<div class="post-body">
-					{{post.body}}
+				<div ng-bind-html="post.body" class="post-body">
 				</div>
 			</div>
 		</div>
